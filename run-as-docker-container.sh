@@ -2,14 +2,14 @@
 
 docker compose up -d --build
 
-# Vérifie le système d'exploitation
+# Check the operating system
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # macOS
   open -a Safari http://localhost:8000
 elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
-  # Windows (utilisation de commandes spécifiques à Windows)
+  # Windows (use Windows-specific commands)
   start chrome http://localhost:8000
 else
-  # Système d'exploitation par défaut pour le navigateur local
-  echo "Le navigateur local n'est pas supporté sur ce système."
+  # Default behavior when opening the local browser is not supported
+  echo "Local browser is not supported on this system."
 fi
